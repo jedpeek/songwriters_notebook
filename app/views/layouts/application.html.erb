@@ -4,12 +4,16 @@
     <title>SongwritersNotebook</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= stylesheet_link_tag 'login' %>
+    <%= javascript_include_tag 'login' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div align="center">
+    <h1>SONGWRITERS NOTEBOOK</h1>
     <%= yield %>
+  </div>
   </body>
 </html>
