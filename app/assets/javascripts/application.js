@@ -17,4 +17,5 @@
 //= require bootstrap-sprockets
 //= require login
 //= require codemirror
+//= require codemirror/modes/ruby
 //= require_tree .

@@ -5,7 +5,7 @@
 					<div class="panel-heading">
 						<div class="row">
 							<div class="col-xs-6">
-								<a href="/login" class="active" id="login-form-link">Login</a>
+								<a href="/login" class="" id="login-form-link">Login</a>
 							</div>
 							<div class="col-xs-6">
 								<a href="/register" id="register-form-link">Register</a>
@@ -17,46 +17,45 @@
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-                <%= form_for @user, :html => { :id => 'login-form' } do |f| %>
-                  <div class = "form-group">
-                    <%= f.text_field :username, {placeholder: "Username", class: "form-control"}   %><br />
-                  </div>
+                <%= form_for @user, :html => {:id => 'login-form'} do |f| %>
+                    <div class = "form-group">
+                      <%= f.text_field :username, {placeholder: "Username", class: "form-control"}   %><br />
+                    </div>
 
-                  <div class = "form-group">
-                    <%= f.text_field :password_digest, {placeholder: "Password", class: "form-control"}   %><br/>
-                  </div>
+                    <div class = "form-group">
+                      <%= f.password_field :password, {placeholder: "Password", class: "form-control"}   %><br/>
+                    </div>
 
-                  <div class = "form-group">
-                    <%= f.submit "Login", class: "form-control btn btn-login" %>
-                  </div>
+                    <div class = "form-group">
+                      <%= f.submit "Login", class: "form-control btn btn-login" %>
+                    </div>
                   <% end %>
+                </div>
               </div>
+            </div>
           </div>
-        </div>
-      </div>
 
       <div class = "panel panel-register">
         <div class = "panel-body">
           <%= form_for @user, :html => { :id => 'register-form' } do |f| %>
-          <div class = "form-group">
-            <%= f.text_field :username, {placeholder: "Username", class: "form-control"}  %><br />
-          </div>
+            <div class = "form-group">
+              <%= f.text_field :username, {placeholder: "Username", class: "form-control"}  %><br />
+            </div>
 
-          <div class = "form-group">
-            <%= f.text_field :email, {placeholder: "Email", class: "form-control"} %><br/>
-          </div>
+            <div class = "form-group">
+              <%= f.text_field :email, {placeholder: "Email", class: "form-control"} %><br/>
+            </div>
 
-          <div class = "form-group">
-            <%= f.text_field :password_digest, {placeholder: "Password", class: "form-control"} %><br/>
-          </div>
+            <div class = "form-group">
+              <%= f.password_field :password, {placeholder: "Password", class: "form-control"} %><br/>
+            </div>
 
-          <div class = "form-group">
-           <%= f.submit "Register", class: "form-control btn btn-register" %>
-              <% end %>
+            <div class = "form-group">
+             <%= f.submit "Register", class: "form-control btn btn-register" %>
+             <% end %>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
-  </div>
 </div>
