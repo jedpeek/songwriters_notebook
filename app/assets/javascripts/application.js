@@ -16,4 +16,5 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require login
+//= require codemirror
 //= require_tree .
